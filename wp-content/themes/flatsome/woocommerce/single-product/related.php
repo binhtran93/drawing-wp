@@ -41,31 +41,31 @@ $repater['slider_style'] = 'reveal';
 $repater['row_spacing'] = 'small';
 
 
-if ( $related_products ) : ?>
-
-  <div class="related related-products-wrapper product-section">
-
-    <h3 class="product-section-title container-width product-section-title-related pt-half pb-half uppercase">
-      <?php esc_html_e( 'Related products', 'woocommerce' ); ?>
-    </h3>
-
-      <?php echo get_flatsome_repeater_start($repater); ?>
-
-      <?php foreach ( $related_products as $related_product ) : ?>
-
-        <?php
-          $post_object = get_post( $related_product->get_id() );
-
-          setup_postdata( $GLOBALS['post'] =& $post_object );
-
-          wc_get_template_part( 'content', 'product' ); ?>
-
-      <?php endforeach; ?>
-
-      <?php echo get_flatsome_repeater_end($repater); ?>
-
-  </div>
-
-<?php endif;
+//if ( $related_products ) : ?>
+<!---->
+<!--  <div class="related related-products-wrapper product-section">-->
+<!---->
+<!--    <h3 class="product-section-title container-width product-section-title-related pt-half pb-half uppercase">-->
+<!--      --><?php //esc_html_e( 'Related products', 'woocommerce' ); ?>
+<!--    </h3>-->
+<!---->
+<!--      --><?php //echo get_flatsome_repeater_start($repater); ?>
+<!---->
+<!--      --><?php //foreach ( $related_products as $related_product ) : ?>
+<!---->
+<!--        --><?php
+//          $post_object = get_post( $related_product->get_id() );
+//
+//          setup_postdata( $GLOBALS['post'] =& $post_object );
+//
+//          wc_get_template_part( 'content', 'product' ); ?>
+<!---->
+<!--      --><?php //endforeach; ?>
+<!---->
+<!--      --><?php //echo get_flatsome_repeater_end($repater); ?>
+<!---->
+<!--  </div>-->
+<!---->
+<?php //endif;
 
 wp_reset_postdata();
